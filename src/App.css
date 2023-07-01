@@ -399,11 +399,13 @@ h3 {
 }
 
 .sign-up-page > form > input {
+  width: 100%;
   background-color: black;
   color: whitesmoke;
 }
 
 .sign-up-page > form > textarea {
+  width: 100%;
   background-color: black;
   color: whitesmoke;
 }
@@ -411,4 +413,7 @@ h3 {
 form {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  height: 450px;
+  justify-content: space-between;
 }
