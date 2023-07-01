@@ -27,7 +27,7 @@ const Modal = ({ show, toggleShowModal, post, setPost, submitPost }) => {
       </div>
 
         <div className="footer">
-          <button className="post-btn2" onClick={submitPost}>POST</button>
+          <button className="post-btn2 bn" onClick={submitPost}>POST</button>
         </div>
       </div>
     </div>

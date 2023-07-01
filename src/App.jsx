@@ -52,16 +52,19 @@ function App() {
                 <h3>Profile Name</h3>
               </div>
               <div className='item-post'>
-                {item.post}
+                <h2 className='post-text'>{item.post}</h2>
               </div>
               <div className="post-footer">
-                <div className="like-btn">
-                <p>Like</p>
-                  <img src={like} alt="like" className='like-icon'/>
+                <div className="post-actions2">
+                  <button className="like-btn bn">
+                    <p>Like</p>
+                    <img src={like} alt="like" className='like-icon'/>
+                  </button>
+                  <button className='like-btn bn'>Comment</button>
                 </div>
                 <div className="post-actions-holder">
-                  <div className="post-actions"><p>Edit Post</p></div>
-                  <div className="post-actions"><p>Delete Post</p></div>
+                  <button className="post-actions bn"><p>Edit Post</p></button>
+                  <button className="post-actions bn"><p>Delete Post</p></button>
                 </div>
               </div>
               

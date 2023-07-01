@@ -13,7 +13,7 @@ function CreatePost({ toggleShowModal }) {
         src={bladeRunner} 
         alt="profile" 
       />
-      <button className='post-btn' onClick={toggleShowModal}>Start a Post</button>
+      <button className='post-btn bn' onClick={toggleShowModal}>Start a Post</button>
       
       
     </div>
