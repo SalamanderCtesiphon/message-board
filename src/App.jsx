@@ -56,8 +56,8 @@ function App() {
               </div>
               <div className="post-footer">
                 <div className="like-btn">
+                <p>Like</p>
                   <img src={like} alt="like" className='like-icon'/>
-                  <p>Like</p>
                 </div>
                 <div className="post-actions-holder">
                   <div className="post-actions"><p>Edit Post</p></div>
