@@ -11,6 +11,12 @@
   justify-content: flex-start;
 }
 
+a {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
 header {
   display: flex;
   align-items: center;
