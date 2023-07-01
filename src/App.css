@@ -120,3 +120,41 @@ header > h1 {
 .post-btn2:hover {
   background-color: rgb(96, 96, 96);
 }
+
+.post-display {
+  width: 35%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.post {
+  border: 1px solid whitesmoke;
+  padding: 20px;
+  width: 100%;
+  margin: 20px;
+  border-radius: 10px;
+}
+
+.post-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.profile-image {
+  height: 40px;
+  width: 40px;
+  margin-right: 20px;
+  border-radius: 50%;
+  background-color: darkgray;
+}
+
+.item-post {
+  border: 1px solid whitesmoke;
+  color: #08AEEA;
+  padding: 20px;
+  text-align: left;
+  border-radius: 10px;
+}

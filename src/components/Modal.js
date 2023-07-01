@@ -1,4 +1,4 @@
-const Modal = ({ show, onCloseButtonClick }) => {
+const Modal = ({ show, onCloseButtonClick, post, setPost, submitPost }) => {
   if (!show) {
     return null;
   }
@@ -6,13 +6,20 @@ const Modal = ({ show, onCloseButtonClick }) => {
   return (
     <div className="modal-wrapper">
       <div className="modal">
-      <div class="input-wrapper">
-        <textarea class="input-box" type='text' placeholder="Enter your text" size={80}></textarea>
-        <span class="underline"></span>
+      <div className="input-wrapper">
+        <textarea 
+          className="input-box" 
+          type='text' 
+          placeholder="Enter your text" 
+          size={80} 
+          value={post}
+          onChange={(e) => setPost(e.target.value)}
+        ></textarea>
+        <span className="underline"></span>
       </div>
 
         <div className="footer">
-          <button className="post-btn2" onClick={onCloseButtonClick}>POST</button>
+          <button className="post-btn2" onClick={submitPost}>POST</button>
         </div>
       </div>
     </div>
