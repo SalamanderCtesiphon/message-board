@@ -1,4 +1,6 @@
-const Modal = ({ show, onCloseButtonClick, post, setPost, submitPost }) => {
+import deleteBtn from '../icons/icons8-close.svg'
+
+const Modal = ({ show, toggleShowModal, post, setPost, submitPost }) => {
   if (!show) {
     return null;
   }
@@ -6,6 +8,12 @@ const Modal = ({ show, onCloseButtonClick, post, setPost, submitPost }) => {
   return (
     <div className="modal-wrapper">
       <div className="modal">
+        <img 
+          src={deleteBtn} 
+          alt="delete" 
+          id='dlt-btn'
+          onClick={toggleShowModal}
+        />
       <div className="input-wrapper">
         <textarea 
           className="input-box" 

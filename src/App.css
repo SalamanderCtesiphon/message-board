@@ -18,7 +18,9 @@ header > h1 {
 
 .post-card {
   border: 1px solid whitesmoke;
+  box-shadow: 2px 2px 4px 1px gray;
   width: 35%;
+  min-width: 800px;
   height: 50px;
   padding: 30px;
   display: flex;
@@ -43,6 +45,18 @@ header > h1 {
   padding: 0 20px;
   font-size: 20px;
   cursor: pointer;
+  border: 2px solid gray;
+  box-shadow: -2px 4px 10px 1px rgba(255, 132, 0, 0.669);
+}
+
+.post-btn:hover {
+  border: 2px solid rgb(255, 132, 0);
+}
+
+#dlt-btn {
+  align-self: last baseline;
+  height: 20px;
+  cursor: pointer;
 }
 
 #post-btn:hover {
@@ -50,6 +64,7 @@ header > h1 {
 }
 
 .modal-wrapper {
+  min-width: 800px;
   width: 38%;
   height: 350px;
   padding: 30px;
@@ -62,6 +77,7 @@ header > h1 {
 .modal {
   border: 1px solid whitesmoke;
   padding: 20px 40px;
+  min-width: 800px;
   width: 100%;
   height: auto;
   border-radius: 10px;
@@ -130,8 +146,10 @@ header > h1 {
 }
 
 .post {
-  border: 1px solid whitesmoke;
-  padding: 20px;
+  border: 1px solid gray;
+  background-color: rgb(35, 35, 35);
+  box-shadow: 2px 2px 4px 1px gray;
+  padding: 0 20px;
   width: 100%;
   margin: 20px;
   border-radius: 10px;
@@ -148,13 +166,55 @@ header > h1 {
   width: 40px;
   margin-right: 20px;
   border-radius: 50%;
-  background-color: darkgray;
+  background-color: orangered;
+}
+
+h3 {
+  color: gray;
 }
 
 .item-post {
-  border: 1px solid whitesmoke;
   color: #08AEEA;
-  padding: 20px;
+  padding: 40px 0;
   text-align: left;
   border-radius: 10px;
+}
+
+.post-footer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.like-btn {
+  border: 1px solid gray;
+  display: flex;
+  align-items: center;
+  width: 60px;
+  height: 30px;
+  padding: 0 4px;
+  border-radius: 20px;
+  margin: 20px 0;
+  cursor: pointer;
+}
+
+.like-icon {
+  height: 20px;
+  margin-right: 2px;
+}
+
+.post-actions-holder {
+  display: flex;
+  width: 30%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.post-actions {
+  cursor: pointer;
+}
+
+.post-actions:hover {
+  transform: scale(1.1);
 }

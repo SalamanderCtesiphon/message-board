@@ -8,7 +8,11 @@ function CreatePost({ toggleShowModal }) {
 
   return (
     <div className="post-card">
-      <img className='profile-pic' src={bladeRunner} alt="profile" />
+      <img 
+        className='profile-pic' 
+        src={bladeRunner} 
+        alt="profile" 
+      />
       <button className='post-btn' onClick={toggleShowModal}>Start a Post</button>
       
       

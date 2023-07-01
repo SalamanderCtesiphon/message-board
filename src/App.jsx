@@ -3,6 +3,7 @@ import CreatePost from './components/CreatePost';
 import Header from './components/Header';
 import Modal from './components/Modal';
 import { useState } from 'react';
+import like from './icons/icons8-like-50.png'
 
 function App() {
   const [showModal, setShowModal] = useState(false);
@@ -19,6 +20,7 @@ function App() {
     setShowModal(!showModal);
     addPost({post});
     console.log(posts);
+    setPost('');
 
   }
 
@@ -37,7 +39,7 @@ function App() {
       <Modal 
         show={showModal} 
         submitPost={submitPost}
-        onCloseButtonClick={toggleShowModal} 
+        toggleShowModal={toggleShowModal} 
         post={post}
         setPost={setPost}
       />
@@ -52,6 +54,17 @@ function App() {
               <div className='item-post'>
                 {item.post}
               </div>
+              <div className="post-footer">
+                <div className="like-btn">
+                  <img src={like} alt="like" className='like-icon'/>
+                  <p>Like</p>
+                </div>
+                <div className="post-actions-holder">
+                  <div className="post-actions"><p>Edit Post</p></div>
+                  <div className="post-actions"><p>Delete Post</p></div>
+                </div>
+              </div>
+              
             
             </div>
           )
