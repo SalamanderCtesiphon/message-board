@@ -6,3 +6,4 @@ so far I have used:
 
 -----html component library from ui verse
 ------ react router
+------- react avatar for uploading avatars
