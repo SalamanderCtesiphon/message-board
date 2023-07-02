@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import UploadImage from '../components/UploadImage';
 
 
 function SignUp() {
@@ -23,10 +22,25 @@ function SignUp() {
   }
 
 
+  const [file, setFile] = useState();
+
+  const handleFileChange = (e) => {
+    if (e.target.files) {
+      setFile(e.target.files[0]);
+    }
+  };
+
+
+  const handleUploadClick = (e) => {
+    e.preventDefault();
+    setUserPic(file);
+    setFile();
+  };
+
   return (
     <div className="sign-up-page">
       <h1>Create Your Profile</h1>
-      <button onClick={() => console.log(users)} className='bn'>Users</button>
+      <button onClick={() => console.log(users[0].userPic)} className='bn'>Users</button>
       <button className='bn'><a href="/">News Feed</a></button>
      
     
@@ -56,7 +70,13 @@ function SignUp() {
             onChange={(e) => setUserInfo(e.target.value)}
           />
           </div>
-          <a href="#"><button className='bn'>Add an image</button></a>
+          <div>
+            <input type="file" onChange={handleFileChange} />
+
+            <div>{file && `${file.name} - ${file.type}`}</div>
+
+            <button onClick={handleUploadClick}>Upload</button>
+          </div>
           <center>
             <a 
               onClick={(e) => createUser(e)}
