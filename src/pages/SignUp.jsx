@@ -6,6 +6,7 @@ function SignUp() {
   const [userPic, setUserPic] = useState({});
   const [userName, setUserName] = useState('');
   const [userInfo, setUserInfo] = useState('');
+  const [file, setFile] = useState();
 
   const createUser = (e) => {
     e.preventDefault();
@@ -22,7 +23,7 @@ function SignUp() {
   }
 
 
-  const [file, setFile] = useState();
+ 
 
   const handleFileChange = (e) => {
     if (e.target.files) {
@@ -39,13 +40,8 @@ function SignUp() {
 
   return (
     <div className="sign-up-page">
-      <h1>Create Your Profile</h1>
-      <button onClick={() => console.log(users[0].userPic)} className='bn'>Users</button>
-      <button className='bn'><a href="/">News Feed</a></button>
-     
-    
+      <h1>Create Your Profile</h1>    
       <div className="login-box">
- 
         <form >
           <div className="user-box">
             <input 
@@ -70,7 +66,8 @@ function SignUp() {
             onChange={(e) => setUserInfo(e.target.value)}
           />
           </div>
-          <div>
+          <h3>Profile Picture:</h3>
+          <div className='file-upload'>
             <input type="file" onChange={handleFileChange} />
 
             <div>{file && `${file.name} - ${file.type}`}</div>

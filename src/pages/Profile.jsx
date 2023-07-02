@@ -5,8 +5,7 @@ function Profile() {
   
   return (
     <div>
-      <button className='bn'><a href="/">Return</a></button>
-      <button className="bn"><a href="/signup">Sign Up</a></button>
+      <h1>Hey, get a load of this. It's the profile page.</h1>
     </div>
   )
 }
