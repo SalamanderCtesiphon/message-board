@@ -6,4 +6,3 @@ so far I have used:
 
 -----html component library from ui verse
 ------ react router
------third-party file uploader from uppy

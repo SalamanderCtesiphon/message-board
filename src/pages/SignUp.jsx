@@ -23,34 +23,44 @@ function SignUp() {
 
   return (
     <div className="sign-up-page">
-      <h1>Sign Up for Message Board</h1>
-      <form onSubmit={(e) => createUser(e)}>
-        <label htmlFor="user-name">Enter a user name:</label>
-        <input 
-          type="text" 
-          placeholder='Enter a user name..'
-          onChange={(e) => setUserName(e.target.value)}
-          value={userName}
-        />
-        <label htmlFor="myFile"></label>
-        <input 
-          type="file" 
-          name="profile-pic" 
-          id="user-pic"
-        />
-        <label htmlFor="info">Tell us something about yourself:</label>
-        <textarea 
-          name="info" 
-          id="info" 
-          cols="30" 
-          rows="10"
-          value={userInfo}
-          onChange={(e) => setUserInfo(e.target.value)}
-        ></textarea>
-        <button className="bn">Submit</button>
-      </form>
-      <button onClick={() => console.log(users)}>Users</button>
+      <h1>Create Your Profile</h1>
+      <button onClick={() => console.log(users)} className='bn'>Users</button>
       <button className='bn'><a href="/">News Feed</a></button>
+    
+      <div className="login-box">
+ 
+        <form >
+          <div className="user-box">
+            <input 
+              type="text" 
+              name="" 
+              required="" 
+              onChange={(e) => setUserName(e.target.value)}
+              value={userName}
+            />
+            <label htmlFor='user-name'>Username</label>
+          </div>
+          <div className="user-box">
+            <label>Bio:</label>
+            <textarea 
+            id='info'
+            type="password" 
+            cols="30" 
+            rows="10"
+            name="info" 
+            required="" 
+            value={userInfo}
+            onChange={(e) => setUserInfo(e.target.value)}
+          />
+            
+          </div><center>
+          <a href="#" onClick={(e) => createUser(e)}>
+                SEND
+            <span></span>
+          </a></center>
+        </form>
+      </div>
+
     </div>
   )
 }
