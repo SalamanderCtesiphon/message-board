@@ -396,6 +396,7 @@ h3 {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
+  height: 200vh;
 }
 
 form {
@@ -410,9 +411,16 @@ textarea {
   width: 100%;
   outline: none;
   margin-top: 30px;
+  margin-bottom: 30px;
   font: inherit;
 }
 
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
 
 .login-box {
   position: absolute;
@@ -509,3 +517,21 @@ textarea {
   background: linear-gradient(90deg, transparent, #03f40f);
   animation: btn-anim1 2s linear infinite;
 }
+
+.image-editor {
+  margin-top: 10px;
+  position: relative;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 600px;
+}
+
+#edit-window {
+  margin-top: 160px;
+}
+
+
+

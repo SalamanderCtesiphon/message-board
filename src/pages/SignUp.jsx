@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import UploadImage from '../components/UploadImage';
+
 
 function SignUp() {
   const [users, setUsers] = useState([]);
@@ -26,6 +28,7 @@ function SignUp() {
       <h1>Create Your Profile</h1>
       <button onClick={() => console.log(users)} className='bn'>Users</button>
       <button className='bn'><a href="/">News Feed</a></button>
+     
     
       <div className="login-box">
  
@@ -52,15 +55,20 @@ function SignUp() {
             value={userInfo}
             onChange={(e) => setUserInfo(e.target.value)}
           />
-            
-          </div><center>
-          <a href="#" onClick={(e) => createUser(e)}>
-                SEND
-            <span></span>
-          </a></center>
+          </div>
+          <a href="#"><button className='bn'>Add an image</button></a>
+          <center>
+            <a 
+              onClick={(e) => createUser(e)}
+              href="#">
+              Create Profile
+              <span></span>
+            </a>
+          </center>
         </form>
+       
       </div>
-
+   
     </div>
   )
 }
